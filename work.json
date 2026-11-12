@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "Notion — Job Prep workspace",
-    "generated": "2026-11-11",
+    "generated": "2026-11-12",
     "notionPages": [
       { "title": "Prep Tracker", "id": "3b99f7dd-ab1b-8181-87e3-f3d78817cbbf" },
       { "title": "Behavioral Story Bank", "id": "3b99f7dd-ab1b-8133-b9f3-fe57bc9b55cc" },
@@ -10,13 +10,13 @@
   },
   "person": {
     "name": "Deepankar Jaisia",
-    "headline": "Full-stack product engineer",
-    "summary": "Full-stack product engineer with an AI/ML edge — an engineer who ships AI-integrated products at scale. 7 years of experience, currently at People Inc., with solo ownership across major platform initiatives: auth, comments and analytics.",
+    "headline": "Full-stack engineer",
+    "summary": "Full-stack engineer with an AI/ML edge who ships AI-integrated products at scale. Almost 9 years of experience, currently at People Inc., with solo ownership across major platform initiatives: auth, comments and analytics.",
     "skills": {
       "Languages": ["TypeScript", "JavaScript", "Java", "Python"],
-      "Frontend": ["React", "Redux", "HTML5", "CSS3", "SASS", "GraphQL"],
+      "Frontend": ["React", "Vue", "Redux", "HTML5", "CSS3", "SASS", "GraphQL"],
       "Backend": ["Node.js", "Express", "Spring Boot", "REST APIs"],
-      "Data": ["PostgreSQL", "MongoDB", "Redis"],
+      "Data": ["PostgreSQL", "MongoDB", "Redis", "SQLite"],
       "Infrastructure": ["AWS Lambda", "Jenkins", "Git", "Kibana", "Grafana", "Auth0", "SSO", "SAML"],
       "AI / ML": ["RAG", "LoRA fine-tuning", "Ollama", "Local LLMs", "OpenAI API", "Pinecone", "Vector stores"]
     },
@@ -28,6 +28,8 @@
       "name": "People Inc.",
       "kind": "company",
       "subtitle": "Formerly Dotdash Meredith",
+      "role": "Senior Software Engineer I",
+      "period": "Jan 2019 – Present",
       "summary": "Platform and product engineering across 45+ brand sites, including People.com at 20M+ DAU — auth, membership, migrations, analytics and growth.",
       "projects": [
         {
@@ -69,9 +71,9 @@
         {
           "id": "comments",
           "title": "Comments on People.com",
-          "summary": "Account templates and service integration for Viafoura comments on People.com.",
+          "summary": "The centralized account management page and its backend, plus the Viafoura comments integration on People.com.",
           "highlights": [
-            "Built the account templates that gather user info and connected the Viafoura comments service.",
+            "Built the centralized account management page and its backend, including the account templates that gather user info, and connected the Viafoura comments service.",
             "Flagged that protected-endpoint auth was happening client-side and pushed for the redirect-to-login logic to move server-side."
           ],
           "metrics": [{ "value": "20M+", "label": "DAU" }],
@@ -187,14 +189,15 @@
       "projects": [
         {
           "id": "rag-agent",
-          "title": "RAG Support Agent",
-          "summary": "A retrieval-augmented pipeline that helps an internal support agent answer basic user questions. Started as a work hackathon project.",
+          "title": "Internal Developer RAG Agent",
+          "summary": "The RAG pipeline behind an internal agent, over the core platform's documentation and internal framework docs. Started as a work hackathon project.",
           "highlights": [
-            "Tied for first place at the hackathon; now in daily use.",
+            "Vectorized the documentation and framework docs into Pinecone, so the agent pulls precise answers with fewer tokens.",
+            "Tied for first place at the hackathon; now used daily by the engineering team.",
             "Tracked usage and cost per request (chunks retrieved, context size); a proper quality evaluation — golden set, retrieval precision, groundedness — is the next step."
           ],
           "metrics": [{ "value": "1st", "label": "place (tied)" }],
-          "tech": ["RAG", "LLMs", "Vector search"],
+          "tech": ["RAG", "LLMs", "Pinecone", "Vector search"],
           "links": []
         },
         {
@@ -233,20 +236,39 @@
       ]
     },
     {
-      "id": "indus-capital",
-      "name": "Indus Capital",
-      "kind": "client",
-      "subtitle": "Financial services client",
-      "summary": "Regulated financial-services client work.",
+      "id": "fdc",
+      "name": "FDC Global",
+      "kind": "company",
+      "role": "Software Engineer, Full-Stack",
+      "period": "Dec 2017 – Dec 2018",
+      "summary": "Full-stack engineering for financial-services clients: an SSO platform for Indus Capital, a hedge fund, and an investment analytics dashboard.",
       "projects": [
         {
           "id": "indus-sso",
-          "title": "SSO for a Regulated Client",
-          "summary": "Built a single sign-on integration using SAML/ADFS that met the client's compliance and security requirements.",
+          "title": "Indus Capital SSO",
+          "role": "Sole designer and engineer",
+          "summary": "Designed and built a secure single sign-on platform for Indus Capital, a hedge-fund client with compliance requirements, using SAML and ADFS.",
           "highlights": [
-            "Chose a full SAML/ADFS integration over a simpler auth flow because the client's compliance bar was non-negotiable."
+            "Chose a full SAML/ADFS integration over a simpler auth flow because the client's compliance bar was non-negotiable.",
+            "Integrated multiple internal and third-party applications end to end behind one sign-on."
           ],
+          "metrics": [{ "value": "~50%", "label": "fewer repeated logins" }],
           "tech": ["SSO", "SAML", "ADFS"],
+          "links": []
+        },
+        {
+          "id": "investment-dashboard",
+          "title": "Investment Analytics Dashboard",
+          "summary": "An end-to-end asset and investment analytics dashboard that automated financial analysis through internal APIs.",
+          "highlights": [
+            "React + Redux frontend on an ASP.NET Core backend with server-side rendering.",
+            "Automated financial analysis via internal APIs, replacing manual reporting."
+          ],
+          "metrics": [
+            { "value": "50+ hrs", "label": "manual reporting removed" },
+            { "value": "25%", "label": "faster load times" }
+          ],
+          "tech": ["React", "Redux", "ASP.NET Core", "SSR"],
           "links": []
         }
       ]
