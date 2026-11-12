@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <!--seo:head:start-->
+    <title>vibecheck.nyc — Deepankar Jaisia</title>
+    <meta name="description" content="A live crowd-density platform for NYC that fuses permitted-events data with public DOT traffic cameras — a Gemini chat agent plus a real-time heatmap…" />
+    <link rel="canonical" href="https://deepjaisiadev.github.io/work/vibecheck-nyc/" />
+    <meta name="robots" content="index, follow, max-snippet:-1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Deepankar Jaisia" />
+    <meta property="og:title" content="vibecheck.nyc — Deepankar Jaisia" />
+    <meta property="og:description" content="A live crowd-density platform for NYC that fuses permitted-events data with public DOT traffic cameras — a Gemini chat agent plus a real-time heatmap…" />
+    <meta property="og:url" content="https://deepjaisiadev.github.io/work/vibecheck-nyc/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="vibecheck.nyc — Deepankar Jaisia" />
+    <meta name="twitter:description" content="A live crowd-density platform for NYC that fuses permitted-events data with public DOT traffic cameras — a Gemini chat agent plus a real-time heatmap…" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://deepjaisiadev.github.io/#website","url":"https://deepjaisiadev.github.io/","name":"Deepankar Jaisia"},{"@type":"Person","@id":"https://deepjaisiadev.github.io/#person","name":"Deepankar Jaisia","url":"https://deepjaisiadev.github.io/","jobTitle":"Full-stack product engineer","description":"Full-stack product engineer with an AI/ML edge — an engineer who ships AI-integrated products at scale. 7 years of experience, currently at People Inc., with solo ownership across major platform initiatives: auth, comments and analytics.","worksFor":{"@type":"Organization","name":"People Inc."},"knowsAbout":["TypeScript","JavaScript","Java","Python","React","Redux","HTML5","CSS3","SASS","GraphQL","Node.js","Express","Spring Boot","REST APIs","PostgreSQL","MongoDB","Redis","AWS Lambda","Jenkins","Git","Kibana","Grafana","Auth0","SSO","SAML","RAG","LoRA fine-tuning","Ollama","Local LLMs","OpenAI API","Pinecone","Vector stores"],"sameAs":["https://www.linkedin.com/in/deepankarjaisia/"]},{"@type":"CreativeWork","@id":"https://deepjaisiadev.github.io/work/vibecheck-nyc/#work","name":"vibecheck.nyc","description":"A live crowd-density platform for NYC that fuses permitted-events data with public DOT traffic cameras — a Gemini chat agent plus a real-time heatmap dashboard. NYC Vision Hack v2 (Google Cloud × Roboflow × Veris).","url":"https://deepjaisiadev.github.io/work/vibecheck-nyc/","creator":{"@id":"https://deepjaisiadev.github.io/#person"},"sourceOrganization":{"@type":"Organization","name":"Hackathons"},"keywords":"React, Google Maps JS API, Canvas, Node.js, Express, GCP Cloud Run, SSE, Docker","sameAs":["http://vibecheck.nyc"],"dateModified":"2026-11-11"},{"@type":"WebPage","@id":"https://deepjaisiadev.github.io/work/vibecheck-nyc/#page","url":"https://deepjaisiadev.github.io/work/vibecheck-nyc/","name":"vibecheck.nyc","isPartOf":{"@id":"https://deepjaisiadev.github.io/#website"},"about":{"@id":"https://deepjaisiadev.github.io/work/vibecheck-nyc/#work"},"breadcrumb":{"@id":"https://deepjaisiadev.github.io/work/vibecheck-nyc/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://deepjaisiadev.github.io/work/vibecheck-nyc/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Deepankar Jaisia","item":"https://deepjaisiadev.github.io/"},{"@type":"ListItem","position":2,"name":"vibecheck.nyc","item":"https://deepjaisiadev.github.io/work/vibecheck-nyc/"}]}]}</script>
+    <!--seo:head:end-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <noscript>
+      <style>.seo-doc{color:#fff;max-width:720px;padding:32px 20px;line-height:1.6;clip:auto!important;width:auto!important;height:auto!important;margin:0 auto!important;position:static!important;overflow:visible!important}.seo-doc a{color:#fff}</style>
+    </noscript>
+    <script type="module" crossorigin src="/assets/index-B6VnRIDG.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CTSAVnwU.css">
+  </head>
+  <body>
+    <div id="root"><!--seo:body:start--><div class="seo-doc"><nav aria-label="Breadcrumb"><a href="/">Deepankar Jaisia</a> / Hackathons</nav><article><h1>vibecheck.nyc</h1><p>Hackathons</p><p>Owned the entire client and data-serving layer</p><p>A live crowd-density platform for NYC that fuses permitted-events data with public DOT traffic cameras — a Gemini chat agent plus a real-time heatmap dashboard. NYC Vision Hack v2 (Google Cloud × Roboflow × Veris).</p><ul><li><strong>33 h</strong> build window</li><li><strong>968</strong> cameras</li><li><strong>16</strong> zones</li></ul><ul><li>When Google deprecated HeatmapLayer mid-build, wrote a replacement from scratch: a canvas OverlayView with Gaussian-blob accumulation and a 256-entry colour lookup table, with zero added dependencies.</li><li>Real-time geospatial aggregation: each camera assigned to the nearest of 16 neighbourhood zones, with “× usual” density ratios against multi-day baselines.</li><li>Auth bridge to an IAM-gated Cloud Run service using GCP metadata-server identity tokens, proxying SSE agent responses and camera frames — shipped as one Docker deploy.</li></ul><p>Stack: React, Google Maps JS API, Canvas, Node.js, Express, GCP Cloud Run, SSE, Docker</p><p><a href="http://vibecheck.nyc" rel="noopener">vibecheck.nyc</a></p></article><section><h2>More from Hackathons</h2><ul><li><a href="/work/rag-agent/">RAG Support Agent</a></li><li><a href="/work/axon/">Axon</a></li></ul></section><p><a href="/">All work by Deepankar Jaisia</a></p></div><!--seo:body:end--></div>
+  </body>
+</html>

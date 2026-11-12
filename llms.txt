@@ -1,0 +1,50 @@
+# Deepankar Jaisia
+
+> Full-stack product engineer. Full-stack product engineer with an AI/ML edge — an engineer who ships AI-integrated products at scale. 7 years of experience, currently at People Inc., with solo ownership across major platform initiatives: auth, comments and analytics.
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/deepankarjaisia/)
+
+## Skills
+
+- Languages: TypeScript, JavaScript, Java, Python
+- Frontend: React, Redux, HTML5, CSS3, SASS, GraphQL
+- Backend: Node.js, Express, Spring Boot, REST APIs
+- Data: PostgreSQL, MongoDB, Redis
+- Infrastructure: AWS Lambda, Jenkins, Git, Kibana, Grafana, Auth0, SSO, SAML
+- AI / ML: RAG, LoRA fine-tuning, Ollama, Local LLMs, OpenAI API, Pinecone, Vector stores
+
+## People Inc. (Formerly Dotdash Meredith)
+
+Platform and product engineering across 45+ brand sites, including People.com at 20M+ DAU — auth, membership, migrations, analytics and growth.
+
+- [Auth Platform Rebuild](https://deepjaisiadev.github.io/work/auth-platform/): Rebuilt the login/auth platform's frontend so every brand site tracks the current core platform instead of lagging behind on stale published packages. Metrics: −50% bundle size; −30% CI/CD deploy time; 45+ brand sites; 20M+ DAU.
+- [People.com Auth Launch — Incident Response](https://deepjaisiadev.github.io/work/auth-launch-incident/): During the auth platform's first launch on People.com, account routes still resolved to the old, dead app. Diagnosed the layer at fault in a ~50-person war room. Metrics: ~50 people in the war room; 0 rollbacks.
+- [Comments on People.com](https://deepjaisiadev.github.io/work/comments/): Account templates and service integration for Viafoura comments on People.com. Metrics: 20M+ DAU.
+- [Migration Squad](https://deepjaisiadev.github.io/work/migration-squad/): After the company merger, moved the last 10 brand sites onto the new internal platform on a 3-month deadline. Metrics: 10 sites migrated; 3 mo deadline met.
+- [Membership Paywall Sprint](https://deepjaisiadev.github.io/work/paywall-sprint/): Brought in to build the navigation for a paywalled membership feature; took ownership of the cross-team branch merge and a caching bug nobody had root-caused. Metrics: ~300 commits merged; 6–7 engineers, 2 teams.
+- [Southern Living Insiders](https://deepjaisiadev.github.io/work/southern-living-insiders/): Owned the nav and footer for a new premium membership tier — shared sitewide components already juggling 15–20 combined states. Metrics: 15–20 nav/footer states.
+- [MyRecipes App Launch](https://deepjaisiadev.github.io/work/myrecipes-app-launch/): App-download marketing pages for the MyRecipes app launch, with install tracking across our pages and a partner's.
+- [Recipe Ticker](https://deepjaisiadev.github.io/work/recipe-ticker/): A continuously updating recipe ticker for MyRecipes.com, built while learning Vue.js on a hard deadline. Metrics: 2M+ DAU; 50 items in memory, max.
+- [GTM Tracking Standardization](https://deepjaisiadev.github.io/work/gtm-tracking/): Refactored how Google Tag Manager tracking is added to web components and introduced a sitewide tagging convention.
+- [Resy × Amex Booking Widget](https://deepjaisiadev.github.io/work/resy-amex-widget/): Picked up a partner-facing booking widget mid-flight while its engineer was on leave.
+
+## Hackathons
+
+Fast builds — work hackathons and NYC Vision Hack v2.
+
+- [RAG Support Agent](https://deepjaisiadev.github.io/work/rag-agent/): A retrieval-augmented pipeline that helps an internal support agent answer basic user questions. Started as a work hackathon project. Metrics: 1st place (tied).
+- [Axon](https://deepjaisiadev.github.io/work/axon/): A real-time, multi-client notes app in the style of Obsidian/Notion, built in about 10 hours at a work hackathon. Metrics: ~10 h build time.
+- [vibecheck.nyc](https://deepjaisiadev.github.io/work/vibecheck-nyc/): A live crowd-density platform for NYC that fuses permitted-events data with public DOT traffic cameras — a Gemini chat agent plus a real-time heatmap dashboard. NYC Vision Hack v2 (Google Cloud × Roboflow × Veris). Metrics: 33 h build window; 968 cameras; 16 zones.
+
+## Indus Capital (Financial services client)
+
+Regulated financial-services client work.
+
+- [SSO for a Regulated Client](https://deepjaisiadev.github.io/work/indus-sso/): Built a single sign-on integration using SAML/ADFS that met the client's compliance and security requirements.
+
+## Optional
+
+- [Full profile](https://deepjaisiadev.github.io/): every project with details
+- [Sitemap](https://deepjaisiadev.github.io/sitemap.xml)

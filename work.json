@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "source": "Notion — Job Prep workspace",
+    "generated": "2026-11-11",
+    "notionPages": [
+      { "title": "Prep Tracker", "id": "3b99f7dd-ab1b-8181-87e3-f3d78817cbbf" },
+      { "title": "Behavioral Story Bank", "id": "3b99f7dd-ab1b-8133-b9f3-fe57bc9b55cc" },
+      { "title": "Decision Stories", "id": "3b99f7dd-ab1b-816d-af34-ccd881f810cf" }
+    ]
+  },
+  "person": {
+    "name": "Deepankar Jaisia",
+    "headline": "Full-stack product engineer",
+    "summary": "Full-stack product engineer with an AI/ML edge — an engineer who ships AI-integrated products at scale. 7 years of experience, currently at People Inc., with solo ownership across major platform initiatives: auth, comments and analytics.",
+    "skills": {
+      "Languages": ["TypeScript", "JavaScript", "Java", "Python"],
+      "Frontend": ["React", "Redux", "HTML5", "CSS3", "SASS", "GraphQL"],
+      "Backend": ["Node.js", "Express", "Spring Boot", "REST APIs"],
+      "Data": ["PostgreSQL", "MongoDB", "Redis"],
+      "Infrastructure": ["AWS Lambda", "Jenkins", "Git", "Kibana", "Grafana", "Auth0", "SSO", "SAML"],
+      "AI / ML": ["RAG", "LoRA fine-tuning", "Ollama", "Local LLMs", "OpenAI API", "Pinecone", "Vector stores"]
+    },
+    "links": [{ "label": "LinkedIn", "url": "https://www.linkedin.com/in/deepankarjaisia/" }]
+  },
+  "orgs": [
+    {
+      "id": "people-inc",
+      "name": "People Inc.",
+      "kind": "company",
+      "subtitle": "Formerly Dotdash Meredith",
+      "summary": "Platform and product engineering across 45+ brand sites, including People.com at 20M+ DAU — auth, membership, migrations, analytics and growth.",
+      "projects": [
+        {
+          "id": "auth-platform",
+          "title": "Auth Platform Rebuild",
+          "role": "Sole architect",
+          "summary": "Rebuilt the login/auth platform's frontend so every brand site tracks the current core platform instead of lagging behind on stale published packages.",
+          "highlights": [
+            "Moved the platform from an npm-dependency model to a git-dependency model — sites pull directly against current source, and the separate publish and hosting step is gone.",
+            "Each site's build package went from ~100 files (the whole project) to the ~15 config/SCSS files it actually needs.",
+            "Onboarded 5 sites — including Investopedia and the People app — ahead of a hard quarterly deadline, without waiting on a cross-team CI/CD change.",
+            "Wrote an onboarding skill and AGENTS.md documentation, plus a shared Slack channel; onboarding became mostly self-serve for other engineers."
+          ],
+          "metrics": [
+            { "value": "−50%", "label": "bundle size" },
+            { "value": "−30%", "label": "CI/CD deploy time" },
+            { "value": "45+", "label": "brand sites" },
+            { "value": "20M+", "label": "DAU" }
+          ],
+          "tech": ["Keycloak", "SCSS", "Gradle", "Git dependencies", "CI/CD"],
+          "links": []
+        },
+        {
+          "id": "auth-launch-incident",
+          "title": "People.com Auth Launch — Incident Response",
+          "summary": "During the auth platform's first launch on People.com, account routes still resolved to the old, dead app. Diagnosed the layer at fault in a ~50-person war room.",
+          "highlights": [
+            "Recognised the symptom from a near-identical incident months earlier, then confirmed from the served HTML that the new app wasn't being hit at all.",
+            "Narrowed it to CDN/edge routing (Fastly redirect rules) rather than application code — and pulled in Infra, who hadn't been on the release.",
+            "Fixed live with no rollback, so the new comments feature stayed up."
+          ],
+          "metrics": [
+            { "value": "~50", "label": "people in the war room" },
+            { "value": "0", "label": "rollbacks" }
+          ],
+          "tech": ["Fastly", "CDN / edge routing", "Incident response"],
+          "links": []
+        },
+        {
+          "id": "comments",
+          "title": "Comments on People.com",
+          "summary": "Account templates and service integration for Viafoura comments on People.com.",
+          "highlights": [
+            "Built the account templates that gather user info and connected the Viafoura comments service.",
+            "Flagged that protected-endpoint auth was happening client-side and pushed for the redirect-to-login logic to move server-side."
+          ],
+          "metrics": [{ "value": "20M+", "label": "DAU" }],
+          "tech": ["Viafoura", "Auth"],
+          "links": []
+        },
+        {
+          "id": "migration-squad",
+          "title": "Migration Squad",
+          "summary": "After the company merger, moved the last 10 brand sites onto the new internal platform on a 3-month deadline.",
+          "highlights": [
+            "Executed the migrations while closing gaps in the existing playbook as real issues came up.",
+            "Re-sequenced a site whose team was near its own launch window instead of forcing the deadline, and documented that exception path."
+          ],
+          "metrics": [
+            { "value": "10", "label": "sites migrated" },
+            { "value": "3 mo", "label": "deadline met" }
+          ],
+          "tech": ["Platform migration", "Documentation"],
+          "links": []
+        },
+        {
+          "id": "paywall-sprint",
+          "title": "Membership Paywall Sprint",
+          "summary": "Brought in to build the navigation for a paywalled membership feature; took ownership of the cross-team branch merge and a caching bug nobody had root-caused.",
+          "highlights": [
+            "Reconciled ~300 commits across two teams' branches, working directly with 6–7 engineers and using Claude to categorise commits by area.",
+            "Traced stale logged-in state through edge, browser cache headers and Redis down to the browser disk cache.",
+            "Removed caching for logged-in users and fixed the related bfcache issue — correct paywall state with no regression for anonymous users.",
+            "Shipped before the hard quarterly deadline."
+          ],
+          "metrics": [
+            { "value": "~300", "label": "commits merged" },
+            { "value": "6–7", "label": "engineers, 2 teams" }
+          ],
+          "tech": ["Caching", "Redis", "bfcache", "Git"],
+          "links": []
+        },
+        {
+          "id": "southern-living-insiders",
+          "title": "Southern Living Insiders",
+          "summary": "Owned the nav and footer for a new premium membership tier — shared sitewide components already juggling 15–20 combined states.",
+          "highlights": [
+            "Added a new membership state without breaking existing combinations (newsletters, subscriptions, logged-in/out, saved recipes, scroll states).",
+            "Decided what logic belonged in the shared core codebase versus the brand's own code.",
+            "Consolidated variants into a single reusable component and worked with design to keep patterns maintainable."
+          ],
+          "metrics": [{ "value": "15–20", "label": "nav/footer states" }],
+          "status": "Live",
+          "tech": ["Component architecture", "State management"],
+          "links": []
+        },
+        {
+          "id": "myrecipes-app-launch",
+          "title": "MyRecipes App Launch",
+          "role": "Lead engineer",
+          "summary": "App-download marketing pages for the MyRecipes app launch, with install tracking across our pages and a partner's.",
+          "highlights": [
+            "Refactored copy-pasted page templates into a config-driven system — a new page is a JSON file.",
+            "Integrated AppsFlyer OneLink and QR codes so installs are tracked.",
+            "Technical point of contact for a third-party company building their own landing pages with the same tracking."
+          ],
+          "status": "Live",
+          "tech": ["AppsFlyer", "Config-driven pages", "JSON"],
+          "links": []
+        },
+        {
+          "id": "recipe-ticker",
+          "title": "Recipe Ticker",
+          "summary": "A continuously updating recipe ticker for MyRecipes.com, built while learning Vue.js on a hard deadline.",
+          "highlights": [
+            "Infinite-feeling scroll with two 25-item lists: fill the off-screen list while the other is in view, then snap seamlessly.",
+            "Only 50 items in memory at any time, however long someone scrolls."
+          ],
+          "metrics": [
+            { "value": "2M+", "label": "DAU" },
+            { "value": "50", "label": "items in memory, max" }
+          ],
+          "tech": ["Vue.js", "Virtualised scrolling"],
+          "links": []
+        },
+        {
+          "id": "gtm-tracking",
+          "title": "GTM Tracking Standardization",
+          "summary": "Refactored how Google Tag Manager tracking is added to web components and introduced a sitewide tagging convention.",
+          "highlights": [
+            "Wrote the documentation followed for migrating events across all sites."
+          ],
+          "tech": ["Google Tag Manager", "Analytics"],
+          "links": []
+        },
+        {
+          "id": "resy-amex-widget",
+          "title": "Resy × Amex Booking Widget",
+          "summary": "Picked up a partner-facing booking widget mid-flight while its engineer was on leave.",
+          "highlights": [
+            "Finished the remaining functionality, including capping reservations shown with a “see more” pattern.",
+            "Got up to speed on the availability endpoint — our proxy in front of Resy's API.",
+            "Represented the team as the only engineer on the final call with Resy and Amex, and raised rate limiting on the backend's behalf.",
+            "Kicked off QA to keep the launch on track."
+          ],
+          "status": "Launching",
+          "tech": ["Partner integration", "API proxy"],
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "hackathons",
+      "name": "Hackathons",
+      "kind": "hackathons",
+      "summary": "Fast builds — work hackathons and NYC Vision Hack v2.",
+      "projects": [
+        {
+          "id": "rag-agent",
+          "title": "RAG Support Agent",
+          "summary": "A retrieval-augmented pipeline that helps an internal support agent answer basic user questions. Started as a work hackathon project.",
+          "highlights": [
+            "Tied for first place at the hackathon; now in daily use.",
+            "Tracked usage and cost per request (chunks retrieved, context size); a proper quality evaluation — golden set, retrieval precision, groundedness — is the next step."
+          ],
+          "metrics": [{ "value": "1st", "label": "place (tied)" }],
+          "tech": ["RAG", "LLMs", "Vector search"],
+          "links": []
+        },
+        {
+          "id": "axon",
+          "title": "Axon",
+          "role": "Architect — implemented with Claude",
+          "summary": "A real-time, multi-client notes app in the style of Obsidian/Notion, built in about 10 hours at a work hackathon.",
+          "highlights": [
+            "Write-then-broadcast: writes POST to SQLite (source of truth), then the server pushes updates to every client over SSE.",
+            "Chose SSE over WebSockets — the write path and broadcast path were already separate.",
+            "Optimistic locking with version checks; the conflict policy depends on the caller (UI prompts the user, MCP retries once).",
+            "MCP server for AI agents to CRUD notes, revision history, a backlink graph view; one codebase for web and Electron."
+          ],
+          "metrics": [{ "value": "~10 h", "label": "build time" }],
+          "tech": ["Vue", "Electron", "SQLite", "SSE", "MCP"],
+          "links": []
+        },
+        {
+          "id": "vibecheck-nyc",
+          "title": "vibecheck.nyc",
+          "role": "Owned the entire client and data-serving layer",
+          "summary": "A live crowd-density platform for NYC that fuses permitted-events data with public DOT traffic cameras — a Gemini chat agent plus a real-time heatmap dashboard. NYC Vision Hack v2 (Google Cloud × Roboflow × Veris).",
+          "highlights": [
+            "When Google deprecated HeatmapLayer mid-build, wrote a replacement from scratch: a canvas OverlayView with Gaussian-blob accumulation and a 256-entry colour lookup table, with zero added dependencies.",
+            "Real-time geospatial aggregation: each camera assigned to the nearest of 16 neighbourhood zones, with “× usual” density ratios against multi-day baselines.",
+            "Auth bridge to an IAM-gated Cloud Run service using GCP metadata-server identity tokens, proxying SSE agent responses and camera frames — shipped as one Docker deploy."
+          ],
+          "metrics": [
+            { "value": "33 h", "label": "build window" },
+            { "value": "968", "label": "cameras" },
+            { "value": "16", "label": "zones" }
+          ],
+          "tech": ["React", "Google Maps JS API", "Canvas", "Node.js", "Express", "GCP Cloud Run", "SSE", "Docker"],
+          "links": [{ "label": "vibecheck.nyc", "url": "http://vibecheck.nyc" }]
+        }
+      ]
+    },
+    {
+      "id": "indus-capital",
+      "name": "Indus Capital",
+      "kind": "client",
+      "subtitle": "Financial services client",
+      "summary": "Regulated financial-services client work.",
+      "projects": [
+        {
+          "id": "indus-sso",
+          "title": "SSO for a Regulated Client",
+          "summary": "Built a single sign-on integration using SAML/ADFS that met the client's compliance and security requirements.",
+          "highlights": [
+            "Chose a full SAML/ADFS integration over a simpler auth flow because the client's compliance bar was non-negotiable."
+          ],
+          "tech": ["SSO", "SAML", "ADFS"],
+          "links": []
+        }
+      ]
+    }
+  ]
+}
